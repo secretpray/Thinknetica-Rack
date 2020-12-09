@@ -9,7 +9,8 @@ class App
   end
 
   def process(path, params)
-    return response(404) unless path == '/time'
+    return response(404) if path != '/time'
+
     time_response(params)
   end
 
